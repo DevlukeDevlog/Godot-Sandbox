@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://kqe6gwjlv1kv"]
+
+[ext_resource type="Script" uid="uid://bmma7asspo7is" path="res://BeatmapGenerator/beatmap_generator.gd" id="1_td3bk"]
+[ext_resource type="AudioStream" uid="uid://da0j1orssr8ik" path="res://BeatmapGenerator/test_music.mp3" id="2_lkuw5"]
+
+[sub_resource type="Curve" id="Curve_lkuw5"]
+_data = [Vector2(0, 0.29680365), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="BeatmapGenerator" type="Node" unique_id=1689189860]
+script = ExtResource("1_td3bk")
+Music = ExtResource("2_lkuw5")
+difficulty_curve = SubResource("Curve_lkuw5")
