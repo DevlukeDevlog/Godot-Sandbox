@@ -13,6 +13,11 @@ config_version=5
 config/name="GodotSandbox"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+AudioManager="*uid://dfsqqvu64m4hq"
+MusicManager="*uid://2lix0o5e5774"
+
 [display]
 
 window/stretch/mode="canvas_items"

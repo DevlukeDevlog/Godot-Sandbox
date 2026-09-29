@@ -26,6 +26,25 @@ func Play_Sound(stream: AudioStream, volume_db: float = 0.0, randomise_pitch: bo
 	player.play()
 	return player
 
+func Play_Sound_2D(stream: AudioStream, position: Vector2, volume_db: float = 0.0, randomise_pitch: bool = false, bypass_cooldown: bool = false, custom_pitch: float = 1.0) -> AudioStreamPlayer2D:
+	if not stream:
+		return null
+		
+	if not bypass_cooldown and _is_sound_stacking(stream):
+		return null
+	
+	var player = AudioStreamPlayer2D.new()
+	player.bus = bus_name
+	player.global_position = position
+	player.max_distance = 1000.0 
+	
+	_prepare_player(player, stream, volume_db, randomise_pitch, custom_pitch)
+	
+	player.finished.connect(func(): player.queue_free())
+	add_child(player)
+	player.play()
+	return player
+
 func _prepare_player(player: Variant, stream: AudioStream, volume_db: float, randomise_pitch: bool, custom_pitch: float) -> void:
 	player.stream = stream
 	player.volume_db = volume_db
