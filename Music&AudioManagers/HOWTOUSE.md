@@ -1,7 +1,4 @@
 # Sound & Music Managers
-
-A lightweight, efficient audio management system for Godot 4.7 featuring a **SoundManager** for 2D and UI sound effects and a **MusicManager** for background tracks.
-
 ## Setup & Installation
 
 ### 1. File Location
