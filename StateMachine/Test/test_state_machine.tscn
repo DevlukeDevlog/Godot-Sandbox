@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dlawed221hwnh"]
+
+[ext_resource type="Texture2D" uid="uid://djgox1onprg5a" path="res://StateMachine/Test/icon.svg" id="1_7r3mg"]
+[ext_resource type="Script" uid="uid://b1ntbni6oeo8v" path="res://StateMachine/StateMachine.gd" id="2_qj5ro"]
+[ext_resource type="Script" uid="uid://cxd0hd88ykyxj" path="res://StateMachine/Test/Idle.gd" id="3_2ndh3"]
+[ext_resource type="Script" uid="uid://be6kx3uuq3c71" path="res://StateMachine/Test/Run.gd" id="4_8m5wp"]
+
+[node name="TestStateMachine" type="Node2D" unique_id=1435497076]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=551639068]
+position = Vector2(578, 339)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=43402211]
+texture = ExtResource("1_7r3mg")
+
+[node name="StateMachine" type="Node" parent="CharacterBody2D" unique_id=664975583 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_qj5ro")
+initial_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://b1ntbni6oeo8v"
+
+[node name="Idle" type="Node" parent="CharacterBody2D/StateMachine" unique_id=1838918311]
+script = ExtResource("3_2ndh3")
+metadata/_custom_type_script = "uid://cxd0hd88ykyxj"
+
+[node name="Run" type="Node" parent="CharacterBody2D/StateMachine" unique_id=1804398149]
+script = ExtResource("4_8m5wp")
+metadata/_custom_type_script = "uid://be6kx3uuq3c71"

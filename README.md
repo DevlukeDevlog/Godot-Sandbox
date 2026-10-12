@@ -15,3 +15,9 @@ A personal collection of reusable components and tools built in Godot 4.7 to spe
   * **Location:** `Music&AudioManagers/`
   
   📄 [**Music & Audio Managers Guide (HOWTOUSE.md)**](Music&AudioManagers/HOWTOUSE.md)
+
+* **State Machine**
+  * **Description:** A clean, modular node-based state machine.
+  * **Location:** `StateMachine/`
+  
+  📄 [**State Machine Guide (HOWTOUSE.md)**](StateMachine/StateMachine_HOWTOUSE.md)
